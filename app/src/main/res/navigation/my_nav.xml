@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/signIn_Fragment">
+
+    <fragment
+        android:id="@+id/signUp_Fragment"
+        android:name="com.example.mapbox.SignUp_Fragment"
+        android:label="sign_up_fragment"
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUp_Fragment_to_map_Fragment"
+            app:destination="@id/map_Fragment" />
+        <action
+            android:id="@+id/action_signUp_Fragment_to_signIn_Fragment2"
+            app:destination="@id/signIn_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/map_Fragment"
+        android:name="com.example.mapbox.map_Fragment"
+        android:label="map_fragment"
+        tools:layout="@layout/map_fragment" />
+    <fragment
+        android:id="@+id/signIn_Fragment"
+        android:name="com.example.mapbox.SignIn_Fragment"
+        android:label="sign_in_fragment"
+        tools:layout="@layout/sign_in_fragment" >
+        <action
+            android:id="@+id/action_signIn_Fragment_to_map_Fragment"
+            app:destination="@id/map_Fragment" />
+        <action
+            android:id="@+id/action_signIn_Fragment_to_signUp_Fragment"
+            app:destination="@id/signUp_Fragment" />
+    </fragment>
+</navigation>
