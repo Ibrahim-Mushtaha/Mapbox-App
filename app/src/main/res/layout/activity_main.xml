@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
-    tools:context=".Activity.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+   <data>
 
+   </data>
 
-   <!-- <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-
-
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textSize="16dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/shape"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="24dp"
-        />
--->
-   <fragment
-       android:id="@+id/fragment"
-       android:name="androidx.navigation.fragment.NavHostFragment"
+   <androidx.drawerlayout.widget.DrawerLayout
+       android:id="@+id/drawer_layout"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       mapbox:defaultNavHost="true"
-       mapbox:navGraph="@navigation/my_nav" />
-</RelativeLayout>
+       android:fitsSystemWindows="true"
+       tools:openDrawer="start">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+      <fragment
+          android:id="@+id/fragment"
+          android:name="androidx.navigation.fragment.NavHostFragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          mapbox:defaultNavHost="true"
+          mapbox:navGraph="@navigation/my_nav" />
+
+      </RelativeLayout>
+
+      <com.google.android.material.navigation.NavigationView
+          android:id="@+id/navigation_view"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_gravity="start"
+          app:headerLayout="@layout/item_header"
+       />
+
+   </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

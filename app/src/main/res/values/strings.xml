@@ -4,4 +4,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tokenKey">pk.eyJ1IjoiaWJyYWhpbW11c2h0YWhhIiwiYSI6ImNrY21jbTNhMDAwMXIydWxtdGZjc2ptYmoifQ.9l9AuJWT5bS0y6v4dVQuOw</string>
+    <string name="openGlToken">pk.b13edf6cb6d293348dd7d84e198c2ea1</string>
+
 </resources>

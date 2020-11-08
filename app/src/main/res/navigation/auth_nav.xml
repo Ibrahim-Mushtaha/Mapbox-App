@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav"
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/Verfiy_Fragment"
+        android:name="com.example.mapbox.ui.fragment.auth.VerfiyPhone_Fragment"
+        android:label="verfiy_phone_fragment">
+
+        <action
+            android:id="@+id/action_Verfiy_Fragment_to_completeProfileFragment"
+            app:destination="@id/completeProfileFragment"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumber_Fragment"
+        android:name="com.example.mapbox.ui.fragment.auth.PhoneNumber_Fragment"
+        android:label="Phone_Number_fragment">
+
+        <action
+            android:id="@+id/action_phoneNumber_Fragment_to_Verfiy_Fragment"
+            app:destination="@id/Verfiy_Fragment"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.mapbox.ui.fragment.auth.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+
+        <action
+            android:id="@+id/action_onBoardingFragment_to_phoneNumber_Fragment"
+            app:destination="@id/phoneNumber_Fragment"
+            app:enterAnim="@anim/slide_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeProfileFragment"
+        android:name="com.example.mapbox.ui.fragment.auth.CompleteProfileFragment"
+        android:label="fragment_complete_profile"
+        tools:layout="@layout/fragment_complete_profile" />
+</navigation>
