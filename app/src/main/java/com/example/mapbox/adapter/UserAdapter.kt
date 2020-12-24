@@ -10,26 +10,19 @@ import com.example.mapbox.model.location.TrackLocation
 import kotlinx.android.synthetic.main.user_item.view.*
 
 
-class User_Adapter(
+class UserAdapter(
     var activity: Activity, var data: MutableList<TrackLocation>, val itemclick: onClick
 ) :
-    RecyclerView.Adapter<User_Adapter.MyViewHolder>() {
+    RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
 
-    class MyViewHolder(item: View) : RecyclerView.ViewHolder(item) {
-
-
-
-
-
-    }
+    class UserViewHolder(item: View) : RecyclerView.ViewHolder(item)
 
 
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val itemView = LayoutInflater.from(activity).inflate(R.layout.user_item, parent, false)
-        return MyViewHolder(itemView)
+        return UserViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +32,7 @@ class User_Adapter(
 
 
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
 
             holder.itemView.apply {
                 all_card.setOnClickListener {
